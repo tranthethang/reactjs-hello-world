@@ -4,8 +4,6 @@ var express = require('express');
 var app = express();
 const port = process.env.PORT || 8000;
 
-console.log(process.env.PORT);
-
 app.set('view engine', 'pug');
 
 app.use(express.static(__dirname + '/public'));
@@ -25,6 +23,10 @@ app.get('/component', (req, res) => {
 
 app.get('/comment', (req, res) => {
     res.render('comment', {title: 'Single comment'});
+});
+
+app.get('/clock', (req, res) => {
+    res.render('clock', {title: 'State and Lifecycle'});
 });
 
 var server = app.listen(port, () => {
