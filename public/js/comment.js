@@ -5,7 +5,7 @@ class Comment extends React.Component {
         this.state = {
             avatar: this.generateAvatar(props.author),
             author: props.author,
-            comment: props.children
+            comment: props.children.toString()
         };
     }
 
@@ -74,7 +74,7 @@ let element = <div>
         non, scelerisque id magna. Morbi in felis convallis, lacinia mi suscipit, vulputate tortor. Vivamus ac ex nunc.
         Quisque condimentum tristique tellus ac placerat. Mauris vel dictum orci. Praesent sit amet aliquet ipsum, eu
         molestie tellus. Cras facilisis viverra velit, vel vehicula neque viverra quis.</Comment>
-    <Comment author='Best Big'>Suspendisse at vulputate tellus.
+    <Comment author='Beast Big'>Suspendisse at vulputate tellus.
         Donec sit amet aliquam odio. Vivamus vestibulum nulla eget neque dapibus volutpat. Maecenas mi risus, commodo
         vel accumsan in, laoreet in diam. Integer iaculis tempus arcu in cursus. Ut lobortis hendrerit bibendum. Nam id
         luctus risus, in euismod orci.</Comment>
