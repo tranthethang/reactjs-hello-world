@@ -1,5 +1,6 @@
 var express = require('express');
 var app = express();
+const port = process.env.PORT || 8000;
 
 app.set('view engine', 'pug');
 
@@ -22,7 +23,7 @@ app.get('/comment', (req, res) => {
     res.render('comment', {title: 'Single comment'});
 });
 
-var server = app.listen(3000, () => {
+var server = app.listen(port, () => {
     var host = server.address().address;
     var port = server.address().port;
 
