@@ -29,6 +29,10 @@ app.get('/clock', (req, res) => {
     res.render('clock', {title: 'State and Lifecycle'});
 });
 
+app.get('/event', (req, res) => {
+    res.render('event', {title: 'Handling Events'});
+});
+
 var server = app.listen(port, () => {
     var host = server.address().address;
     var port = server.address().port;

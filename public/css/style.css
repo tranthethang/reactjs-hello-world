@@ -1,13 +1,13 @@
 body {
     font-size: 85%;
-    background: #999;
+    background: #fafafa;
 }
 
 .comment {
     padding-top: 20px;
     padding-bottom: 20px;
-    border-bottom: 1px #444 solid;
-    border-top: 1px #ccc solid;
+    border-bottom: 1px #ddd solid;
+    border-top: 2px #fff solid;
 }
 
 .comment:first-child {
