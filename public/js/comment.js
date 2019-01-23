@@ -3,10 +3,15 @@ class Comment extends React.Component {
         super(props);
 
         this.state = {
-            avatar: props.avatar,
+            avatar: this.generateAvatar(props.author),
             author: props.author,
             comment: props.children
         };
+    }
+
+    generateAvatar(author) {
+        let dropcap = author.substring(0, 1);
+        return 'https://place-hold.it/60x60?text=' + dropcap + '&italic&bold';
     }
 
     render() {
@@ -53,9 +58,26 @@ class Author extends React.Component {
 }
 
 let element = <div>
-    <Comment avatar='https://place-hold.it/60x60?text=J&italic&bold' author='John Doe'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec volutpat commodo consectetur. Praesent vel dignissim neque. Maecenas ut dapibus nunc. Donec volutpat libero augue, in varius urna blandit eget. Pellentesque fermentum, sem sit amet blandit faucibus, eros neque luctus diam, ut scelerisque risus quam id turpis. Ut tempus urna ut tellus tincidunt efficitur. Phasellus placerat id mi sed interdum. Phasellus porttitor tempor rhoncus. Vestibulum vulputate vel sapien at commodo. Maecenas eu faucibus nunc. Proin sodales, nibh a gravida bibendum, purus libero malesuada magna, ut rhoncus felis felis ac arcu. Pellentesque sit amet rhoncus justo, sed facilisis odio. Suspendisse potenti.</Comment>
-    <Comment avatar='https://place-hold.it/60x60?text=K&italic&bold' author='Kia Lee'>Morbi vitae augue elementum, faucibus leo sit amet, laoreet libero. Nunc egestas laoreet imperdiet. Donec gravida nisl risus, vel aliquam sem finibus at. Vivamus sodales libero quis tempor suscipit. Nam mollis, urna quis faucibus fermentum, ipsum justo porta tortor, varius pellentesque justo neque id turpis. Morbi auctor congue erat quis dapibus. Nam pretium odio ut erat vestibulum commodo. Aenean malesuada feugiat nulla a facilisis. Donec lacus lacus, sodales nec molestie non, scelerisque id magna. Morbi in felis convallis, lacinia mi suscipit, vulputate tortor. Vivamus ac ex nunc. Quisque condimentum tristique tellus ac placerat. Mauris vel dictum orci. Praesent sit amet aliquet ipsum, eu molestie tellus. Cras facilisis viverra velit, vel vehicula neque viverra quis.</Comment>
-    <Comment avatar='https://place-hold.it/60x60?text=B&italic&bold' author='Best Big'>Suspendisse at vulputate tellus. Donec sit amet aliquam odio. Vivamus vestibulum nulla eget neque dapibus volutpat. Maecenas mi risus, commodo vel accumsan in, laoreet in diam. Integer iaculis tempus arcu in cursus. Ut lobortis hendrerit bibendum. Nam id luctus risus, in euismod orci.</Comment>
+    <Comment author='John Doe'>Lorem ipsum dolor sit amet,
+        consectetur adipiscing elit. Donec volutpat commodo consectetur. Praesent vel dignissim neque. Maecenas ut
+        dapibus nunc. Donec volutpat libero augue, in varius urna blandit eget. Pellentesque fermentum, sem sit amet
+        blandit faucibus, eros neque luctus diam, ut scelerisque risus quam id turpis. Ut tempus urna ut tellus
+        tincidunt efficitur. Phasellus placerat id mi sed interdum. Phasellus porttitor tempor rhoncus. Vestibulum
+        vulputate vel sapien at commodo. Maecenas eu faucibus nunc. Proin sodales, nibh a gravida bibendum, purus libero
+        malesuada magna, ut rhoncus felis felis ac arcu. Pellentesque sit amet rhoncus justo, sed facilisis odio.
+        Suspendisse potenti.</Comment>
+    <Comment author='Kia Lee'>Morbi vitae augue elementum,
+        faucibus leo sit amet, laoreet libero. Nunc egestas laoreet imperdiet. Donec gravida nisl risus, vel aliquam sem
+        finibus at. Vivamus sodales libero quis tempor suscipit. Nam mollis, urna quis faucibus fermentum, ipsum justo
+        porta tortor, varius pellentesque justo neque id turpis. Morbi auctor congue erat quis dapibus. Nam pretium odio
+        ut erat vestibulum commodo. Aenean malesuada feugiat nulla a facilisis. Donec lacus lacus, sodales nec molestie
+        non, scelerisque id magna. Morbi in felis convallis, lacinia mi suscipit, vulputate tortor. Vivamus ac ex nunc.
+        Quisque condimentum tristique tellus ac placerat. Mauris vel dictum orci. Praesent sit amet aliquet ipsum, eu
+        molestie tellus. Cras facilisis viverra velit, vel vehicula neque viverra quis.</Comment>
+    <Comment author='Best Big'>Suspendisse at vulputate tellus.
+        Donec sit amet aliquam odio. Vivamus vestibulum nulla eget neque dapibus volutpat. Maecenas mi risus, commodo
+        vel accumsan in, laoreet in diam. Integer iaculis tempus arcu in cursus. Ut lobortis hendrerit bibendum. Nam id
+        luctus risus, in euismod orci.</Comment>
 </div>;
 
 ReactDOM.render(
