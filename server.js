@@ -4,6 +4,7 @@ var app = express();
 app.set('view engine', 'pug');
 
 app.use(express.static(__dirname + '/public'));
+app.use(express.static(__dirname + '/node_modules/bootstrap/dist/'));
 
 app.get('/hello-world', (req, res) => {
     res.render('hello-world', {title: 'Hello World'})
@@ -15,6 +16,10 @@ app.get('/greeting', (req, res) => {
 
 app.get('/component', (req, res) => {
     res.render('component', {title: 'Components and Props'});
+});
+
+app.get('/comment', (req, res) => {
+    res.render('comment', {title: 'Single comment'});
 });
 
 var server = app.listen(3000, () => {

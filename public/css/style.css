@@ -1,0 +1,25 @@
+body {
+    font-size: 85%;
+    background: #999;
+}
+
+.comment {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px #444 solid;
+    border-top: 1px #ccc solid;
+}
+
+.comment:first-child {
+    padding-top: 0;
+    padding-bottom: 0;
+    border-top: none;
+}
+
+.comment:last-child {
+    border-bottom: none;
+}
+
+.comment__avatar {
+    margin-right: 10px;
+}
