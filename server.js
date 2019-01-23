@@ -3,8 +3,10 @@ var app = express();
 
 app.set('view engine', 'pug');
 
-app.get('/', function (req, res) {
-    res.render('index', { title: 'Hey', message: 'Hello there!' })
+app.use(express.static(__dirname + '/public'));
+
+app.get('/hello-world', function (req, res) {
+    res.render('hello-world', { title: 'Hello World' })
 });
 
 var server = app.listen(3000, function () {
