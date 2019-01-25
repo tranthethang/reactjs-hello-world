@@ -33,7 +33,7 @@ class PageItem extends React.Component {
     }
 
     render() {
-        let href = 'http://localhost:3000/' + this.props.slug;
+        let href = '/' + this.props.slug;
 
         return (
             <li>

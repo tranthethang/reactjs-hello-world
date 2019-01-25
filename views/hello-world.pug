@@ -1,8 +1,11 @@
 html
     include _head
     body
-        #root
+        .container
+            include _header
 
-        script(src='/js/hello-world.js' type="text/babel")
+            #root
 
-        include _footer
+            script(src='/js/hello-world.js' type="text/babel")
+
+            include _footer
