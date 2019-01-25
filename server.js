@@ -9,6 +9,10 @@ app.set('view engine', 'pug');
 app.use(express.static(__dirname + '/public'));
 app.use(express.static(__dirname + '/node_modules/bootstrap/dist/'));
 
+app.get('/', (req, res) => {
+    res.render('index', {title: 'Learn ReactJs with me, now!'});
+});
+
 app.get('/hello-world', (req, res) => {
     res.render('hello-world', {title: 'Hello World'})
 });
