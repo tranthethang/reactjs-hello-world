@@ -1,7 +1,7 @@
 require('dotenv').load();
 
-var express = require('express');
-var app = express();
+const express = require('express');
+const app = express();
 const port = process.env.PORT || 8000;
 
 app.set('view engine', 'pug');
@@ -33,9 +33,13 @@ app.get('/event', (req, res) => {
     res.render('event', {title: 'Handling Events'});
 });
 
-var server = app.listen(port, () => {
-    var host = server.address().address;
-    var port = server.address().port;
+app.get('/boil', (req, res) => {
+    res.render('boil', {title: 'Boil calculator'})
+});
+
+const server = app.listen(port, () => {
+    let host = server.address().address;
+    let port = server.address().port;
 
     console.log("Running.. http://%s:%s", host, port);
 });
