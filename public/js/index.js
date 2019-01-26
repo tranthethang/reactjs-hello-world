@@ -27,7 +27,6 @@ class PageList extends React.Component {
 }
 
 class PageItem extends React.Component {
-
     constructor(props) {
         super(props);
     }
