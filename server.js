@@ -28,8 +28,7 @@ pages.map((page) => {
 });
 
 const server = app.listen(port, () => {
-    let host = server.address().address;
     let port = server.address().port;
 
-    console.log("Running.. http://%s:%s", host, port);
+    console.log("Running.. http://localhost:%s", port);
 });
