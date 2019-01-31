@@ -7,6 +7,11 @@ class TodoForm extends React.Component {
         return (
             <form action='#' method='POST'>
                 <h3>Form</h3>
+
+                <p>
+                    <label>Task</label>
+                    <input/>
+                </p>
             </form>
         );
     }
