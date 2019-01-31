@@ -11,7 +11,8 @@ class PageList extends React.Component {
             ['comment', 'Comments'],
             ['clock', 'State and Lifecycle'],
             ['event', 'Handling Events'],
-            ['boil', 'Thermometer']
+            ['boil', 'Thermometer'],
+            ['todo-list', 'Todo list']
         ];
 
         return (

@@ -11,7 +11,8 @@ const pages = [
     {slug: 'comment', title: 'Comments'},
     {slug: 'clock', title: 'State and Lifecycle'},
     {slug: 'event', title: 'Handling Events'},
-    {slug: 'boil', title: 'Thermometer'}
+    {slug: 'boil', title: 'Thermometer'},
+    {slug: 'todo-list', title: 'Todo list'}
 ];
 
 app.set('view engine', 'pug');
