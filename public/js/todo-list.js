@@ -40,7 +40,7 @@ class TodoList extends React.Component {
                 <p>
                     <button class="btn btn-primary btn-sm" onClick={this.handleNewTask}>New task</button>
                     &nbsp;
-                    <button class="btn btn-secondary btn-sm" onClick={this.handleGetTasks}>Grap</button>
+                    <button class="btn btn-secondary btn-sm" onClick={this.handleGetTasks}>Print tasks on console!</button>
                 </p>
             </div>
         );
