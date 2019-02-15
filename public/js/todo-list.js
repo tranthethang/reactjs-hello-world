@@ -28,7 +28,7 @@ class TodoList extends React.Component {
         return (
             <div>
                 <code>Double click to edit a task!</code>
-                <ul class="list-unstyled">
+                <ul className="list-unstyled">
                     {this.state.tasks.map((task, index) => {
                         return (
                             <li>
@@ -38,9 +38,9 @@ class TodoList extends React.Component {
                     })}
                 </ul>
                 <p>
-                    <button class="btn btn-primary btn-sm" onClick={this.handleNewTask}>New task</button>
+                    <button className="btn btn-primary btn-sm" onClick={this.handleNewTask}>New task</button>
                     &nbsp;
-                    <button class="btn btn-secondary btn-sm" onClick={this.handleGetTasks}>Print tasks on console!</button>
+                    <button className="btn btn-secondary btn-sm" onClick={this.handleGetTasks}>Print tasks on console!</button>
                 </p>
             </div>
         );
